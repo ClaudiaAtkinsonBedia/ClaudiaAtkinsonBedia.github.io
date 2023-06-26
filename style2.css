@@ -1,0 +1,17 @@
+body
+{
+    background-image: url(Images/Background.png);
+    background-size: cover;
+}
+
+#sectionIcons
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+#sectionIcons img
+{
+    margin-top: 15%;
+    height: 80%;
+}

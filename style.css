@@ -21,17 +21,6 @@ body
     background-size: cover;
 }
 
-#sectionIcons
-{
-    display: flex;
-    justify-content: space-between;
-}
-
-#sectionIcons img
-{
-    height: 100%;
-}
-
 header 
 {
     display: flex;

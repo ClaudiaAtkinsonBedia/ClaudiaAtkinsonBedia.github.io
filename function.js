@@ -1,4 +1,3 @@
-/* MUST CREDIT THE AUTHOR <a href="https://www.flaticon.com/free-icons/uk-flag" title="uk flag icons">Uk flag icons created by Freepik - Flaticon</a></a>*/
 window.onload = init;
 
 function init()

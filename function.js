@@ -27,10 +27,12 @@ function init()
     document.body.appendChild(css);
 
     var elements2 = document.getElementsByClassName('txt-rotate2');
-    for (var i=0; i<elements2.length; i++) {
+    for (var i=0; i<elements2.length; i++) 
+    {
       var toRotate2 = elements2[i].getAttribute('data-rotate');
       var period2 = elements2[i].getAttribute('data-period');
-      if (toRotate2) {
+      if (toRotate2)
+      {
         new TxtRotate(elements2[i], JSON.parse(toRotate2), period2);
       }
     }
@@ -43,37 +45,37 @@ function init()
 
 function getBigger(event) 
 {
-    event.target.style.height = "2em";
+  event.target.style.height = "2em";
 }
 
 function getSmaller(event)
 {
-    event.target.style.height = "1.5em";
+  event.target.style.height = "1.5em";
 }
 
 var TxtRotate = function(el, toRotate, period) 
 {
-    this.toRotate = toRotate;
-    this.el = el;
-    this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
-    this.txt = '';
-    this.tick();
-    this.isDeleting = false;
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
 };
   
   TxtRotate.prototype.tick = function() 
   {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
   
     if (this.isDeleting) 
     {
-      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
     } 
     else 
     {
-      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
   
     this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
@@ -81,20 +83,25 @@ var TxtRotate = function(el, toRotate, period)
     var that = this;
     var delta = 300 - Math.random() * 100;
   
-    if (this.isDeleting) { delta /= 2; }
+    if (this.isDeleting) 
+    { 
+      delta /= 2; 
+    }
   
     if (!this.isDeleting && this.txt === fullTxt) 
     {
       delta = this.period;
       this.isDeleting = true;
     } 
-    else if (this.isDeleting && this.txt === '') {
+    else if (this.isDeleting && this.txt === '') 
+    {
       this.isDeleting = false;
       this.loopNum++;
       delta = 500;
     }
   
-    setTimeout(function() {
+    setTimeout(function() 
+    {
       that.tick();
     }, delta);
   };

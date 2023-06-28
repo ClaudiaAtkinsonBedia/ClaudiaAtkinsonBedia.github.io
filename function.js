@@ -107,6 +107,9 @@ var TxtRotate = function(el, toRotate, period)
   };
 
 /*
+
+<a href="https://www.freepik.com/free-photo/3d-render-abstract-background-with-flowing-particles_15873051.htm#query=techno%20background&position=49&from_view=keyword&track=ais">Image by kjpargeter</a> on Freepik
+
 1. Make website scrollable and limit number of buttons 
 
 2. Say who you are in the header, name, freelancer or not.

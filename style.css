@@ -17,7 +17,7 @@ body
     flex-direction: column;
     justify-self: center;
     align-items: center;
-    background-image: url(Images/Background.png);
+    background-image: url(Images/Techno\ Background.jpg);
     background-size: cover;
 }
 
@@ -111,6 +111,7 @@ h1
     justify-self: center;
     align-items: center;
     margin-top: 10vw;
+    color: white;
 }
 
 p
@@ -122,4 +123,5 @@ p
     align-items: center;
     margin-left: 15%;
     margin-right: 15%;
+    color: white;
 }
